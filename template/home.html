@@ -1,0 +1,359 @@
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+{% include 'navbar.html' %}
+
+
+  <!-- ======= Header ======= -->
+  
+  <!-- ======= Hero Section ======= -->
+  <section id="hero" class="hero">
+
+    <div class="info d-flex align-items-center">
+      <div class="container">
+        <div class="row justify-content-center">
+          <div class="col-lg-6 text-center">
+            <h2 data-aos="fade-down">Welcome to <span>IRIS</span></h2>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div id="hero-carousel" class="carousel slide" data-bs-ride="carousel" data-bs-interval="5000">
+
+      <div class="carousel-item active" style="background-image: url(static/img/hero-carousel/music-1.jpg)"></div>
+      <div class="carousel-item" style="background-image: url(static/img/hero-carousel/music-2.jpg)"></div>
+      <div class="carousel-item" style="background-image: url(static/img/hero-carousel/book-2.jpg)"></div>
+      <div class="carousel-item" style="background-image: url(static/img/hero-carousel/book-3.jpg)"></div>
+      <div class="carousel-item" style="background-image: url(static/img/hero-carousel/eye-4.jpg)"></div>
+
+      <a class="carousel-control-prev" href="#hero-carousel" role="button" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon bi bi-chevron-left" aria-hidden="true"></span>
+      </a>
+
+      <a class="carousel-control-next" href="#hero-carousel" role="button" data-bs-slide="next">
+        <span class="carousel-control-next-icon bi bi-chevron-right" aria-hidden="true"></span>
+      </a>
+
+    </div>
+
+  </section><!-- End Hero Section -->
+
+  <main id="main">
+
+    <!-- ======= Get Started Section ======= -->
+    
+    </section><!-- End Get Started Section -->
+
+    <!-- ======= Constructions Section ======= -->
+    <section id="about" class="constructions">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>Welcome to IRIS</h2>
+          <p>We Provide  you the Vision of Imagination!!!</p>
+        </div>
+
+        <div class="row gy-4">
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg" style="background-image: url(static/img/M_1.jpg);"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">Enjoy the Rythm of MUSIC.</h4>
+                    <p>Music gives a soul to the universe, wings to the mind, flight to the imagination and life to everything..</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+          <div class="col-lg-6" data-aos="fade-up" data-aos-delay="200">
+            <div class="card-item">
+              <div class="row">
+                <div class="col-xl-5">
+                  <div class="card-bg" style="background-image: url(static/img/M_2.jpg);"></div>
+                </div>
+                <div class="col-xl-7 d-flex align-items-center">
+                  <div class="card-body">
+                    <h4 class="card-title">Enjoy hearing STORIES.</h4>
+                    <p>A book is a garden, an orchard, a storehouse, a party, a company by the way, a counselor, a multitude of counselors.</p>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Card Item -->
+
+
+    
+    <!-- ======= Our Projects Section ======= -->
+    <section id="book" class="projects">
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>BOOKS</h2>
+          <p>There is no friend , as loyal as a book.
+            </p>
+        </div>
+
+        <div class="portfolio-isotope" data-portfolio-filter="*" data-portfolio-layout="masonry" data-portfolio-sort="original-order">
+
+          <ul class="portfolio-flters" data-aos="fade-up" data-aos-delay="100">
+            <li data-filter="*" class="filter-active">READ AND ENJOY....</li>
+            <!-- <li data-filter=".filter-remodeling">Short Stories</li>
+            <li data-filter=".filter-construction">Novels</li>
+            <li data-filter=".filter-repairs">Kids Stories</li> -->
+            
+          </ul><!-- End Projects Filters -->
+
+          <!-- {% for d in demo %}
+
+          <h2>{{d.b_name}} 'filepath' = {{d.file}} &nbsp;description {{d.desc}}</h2>
+          <!-- <img src="{{d.file}}" class="img-fluid" alt="alternative"> -->
+          <!-- <iframe src="{{d.file}}" type="application/pdf" style="width:600px; height:500px;"></iframe> -->
+          <!-- <embed src="{{d.file}}" type="application/pdf"> -->
+            <!-- <object data="{{d.file}}">
+            </object>
+
+
+          {% endfor %}--> 
+
+          <!-- {% for i in result %}
+
+          <h2>{{i.b_name}} 'filepath' = {{i.file}} &nbsp;description {{i.desc}}</h2> -->
+          <!-- <img src="{{d.file}}" class="img-fluid" alt="alternative"> -->
+          <!-- <iframe src="{{d.file}}" type="application/pdf" style="width:600px; height:500px;"></iframe> -->
+          <!-- <embed src="{{d.file}}" type="application/pdf"> -->
+            <!-- <object data="{{i.file}}">
+            </object>
+
+
+          {% endfor %} -->
+
+          <div class="row gy-4 portfolio-container" data-aos="fade-up" data-aos-delay="200">
+            
+            {% for i in obj %}
+            <div class="col-lg-4 col-md-6 portfolio-item filter-remodeling card" style="width: 15rem; height:35rem;">
+              <div class="portfolio-content h-100">
+                <img src="{{i.img.url}}" class="img-fluid" alt="">
+                <div class="text">
+                  <h2 class="mb-0">{{i.b_name}}</a></h2>
+                  <!-- <h2 class="mb-0">{{i.file}}</a></h2> -->
+                   <div class="d-flex mb-3">
+                      <!-- <span class="cat">Cheverolet</span> -->
+                      <p class="price ml-auto">{{i.desc}}</p>
+                  </div> 
+                  <audio controls>
+                    <source src="{{i.file.url}}" type="audio/ogg">
+                  <!-- Your browser does not support the audio element. -->
+                  </audio>
+                  <!-- <a href="#"><p class="d-flex mb-0 d-block">{{i.file}}</p></a> -->
+                  <!-- <a href="{% url 'login' %}" class="btn btn-primary py-2 mr-1">READ</a>  -->
+              </div>
+              <!-- <div class="portfolio-info">
+                <h4>Short Storie 1</h4> -->
+                <!-- <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="static/img/projects/short_stories_1.jpg" title="Remodeling 1" data-gallery="portfolio-gallery-remodeling" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a> -->
+                </div>
+              </div>
+              {% endfor %}
+            </div><!-- End Projects Item -->
+<!-- 
+            <div class="col-lg-4 col-md-6 portfolio-item filter-construction">
+              <div class="portfolio-content h-100">
+                <img src="static/img/projects/construction-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Construction 1</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="static/img/projects/construction-1.jpg" title="Construction 1" data-gallery="portfolio-gallery-construction" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div><!-- End Projects Item -->
+
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-repairs">
+              <div class="portfolio-content h-100">
+                <img src="static/img/projects/repairs-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Repairs 1</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="static/img/projects/repairs-1.jpg" title="Repairs 1" data-gallery="portfolio-gallery-repairs" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>End Projects Item -->
+
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-design">
+              <div class="portfolio-content h-100">
+                <img src="static/img/projects/design-1.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Design 1</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="static/img/projects/design-1.jpg" title="Repairs 1" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>End Projects Item -->
+
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-remodeling">
+              <div class="portfolio-content h-100">
+                <img src="static/img/projects/remodeling-2.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Remodeling 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="static/img/projects/remodeling-2.jpg" title="Remodeling 2" data-gallery="portfolio-gallery-remodeling" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div> -->
+            </div><!-- End Projects Item -->
+
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-construction">
+              <div class="portfolio-content h-100">
+                <img src="static/img/projects/construction-2.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Construction 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="static/img/projects/construction-2.jpg" title="Construction 2" data-gallery="portfolio-gallery-construction" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>End Projects Item -->
+
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-repairs">
+              <div class="portfolio-content h-100">
+                <img src="static/img/projects/repairs-2.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Repairs 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="static/img/projects/repairs-2.jpg" title="Repairs 2" data-gallery="portfolio-gallery-repairs" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>End Projects Item -->
+<!-- 
+            <div class="col-lg-4 col-md-6 portfolio-item filter-design">
+              <div class="portfolio-content h-100">
+                <img src="static/img/projects/design-2.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Design 2</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="static/img/projects/design-2.jpg" title="Repairs 2" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>End Projects Item -->
+
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-remodeling">
+              <div class="portfolio-content h-100">
+                <img src="static/img/projects/remodeling-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Remodeling 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="static/img/projects/remodeling-3.jpg" title="Remodeling 3" data-gallery="portfolio-gallery-remodeling" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>
+            </div>End Projects Item -->
+
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-construction">
+              <div class="portfolio-content h-100">
+                <img src="static/img/projects/construction-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Construction 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="static/img/projects/construction-3.jpg" title="Construction 3" data-gallery="portfolio-gallery-construction" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div> -->
+            </div><!-- End Projects Item -->
+
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-repairs">
+              <div class="portfolio-content h-100">
+                <img src="static/img/projects/repairs-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Repairs 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="static/img/projects/repairs-3.jpg" title="Repairs 2" data-gallery="portfolio-gallery-repairs" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div> -->
+            </div><!-- End Projects Item -->
+
+            <!-- <div class="col-lg-4 col-md-6 portfolio-item filter-design">
+              <div class="portfolio-content h-100">
+                <img src="static/img/projects/design-3.jpg" class="img-fluid" alt="">
+                <div class="portfolio-info">
+                  <h4>Design 3</h4>
+                  <p>Lorem ipsum, dolor sit amet consectetur</p>
+                  <a href="static/img/projects/design-3.jpg" title="Repairs 3" data-gallery="portfolio-gallery-book" class="glightbox preview-link"><i class="bi bi-zoom-in"></i></a>
+                  <a href="project-details.html" title="More Details" class="details-link"><i class="bi bi-link-45deg"></i></a>
+                </div>
+              </div>  -->
+            </div><!-- End Projects Item -->
+
+          </div><!-- End Projects Container -->
+
+        </div>
+
+      </div>
+    </section><!-- End Our Projects Section -->
+
+
+<section id="music" class="team">
+      <div class="container aos-init aos-animate" data-aos="fade-up">
+
+        <div class="section-header">
+          <h2>MUSIC</h2>
+          <p>DON'T JUST HEAR IT.... FEEL IT......</p>
+        </div>
+
+        <div class="row gy-5">
+
+          <div class="col-lg-4 col-md-6 member aos-init aos-animate" data-aos="fade-up" data-aos-delay="100">
+            {% for j in sng %}
+            <div class="member-img">
+              
+              <img src="{{j.img.url}}" class="img-fluid" alt="">
+              
+            </div>
+            <div class="member-info text-center">
+              <h4>{{j.s_name}}</h4>
+              
+            </div>
+            <audio controls>
+              <source src="{{j.file.url}}" type="audio/ogg"></audio> 
+            </div>
+          {% endfor %}
+
+         
+          </div><!-- End Team Member -->
+
+        </div>
+
+      </div>
+    </section>
+    
+           
+                 
+        </div><!-- End post item -->
+
+             
+
+  </main><!-- End #main -->
+
+
+
+  {% include 'footer.html' %}
+
+
+
+{% endblock content %}

@@ -1,0 +1,63 @@
+
+
+{% extends 'base.html' %}
+
+{% load static %}
+
+{% block content %}
+
+    <!-- form section start -->
+    <section class="w3l-hotair-form">
+        <h1>New User, </h1>
+        <div class="container">
+            <!-- /form -->
+            <div class="workinghny-form-grid">
+                <div class="main-hotair">
+                    <div class="content-wthree">
+                        <h2>Sign up</h2>
+                        {% include 'alerts.html' %}
+                        <form onsubmit="return validate_password()" action="{%url 'register' %}" method="POST">
+                            {% csrf_token %}
+                            <input type="text" class="text" name="username" placeholder="User Name" required class="form-control" autocomplete="off">
+                            <input type="password" id="passwd" class="password" name="password" placeholder="User Password" required autocomplete="off" autofocus>
+                            <span id="error-passwd"></span>
+                            <input type="password" id="c_passwd" class="password" name="cpassword" placeholder="confirm Password" required autofocus autocomplete="off">
+                            <span id="error-c-passwd" style="margin: 10px;"></span>
+                            <button class="btn" type="submit">Register</button>
+                        </form>
+                        
+                        <p class="account">Have an account? <a href="{% url 'login' %}">Login</a></p>
+                    </div>
+                    <div class="w3l_form align-self">
+                        <div class="left_grid_info">
+                            <img src="{% static 'img/1.png' %}" alt="" class="img-fluid">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <!-- //form -->
+        </div>
+        
+        <!-- //copyright-->
+    </section>
+
+    <script>
+        function validate_password() {
+ 
+            var pass = document.getElementById('passwd').value;
+            var confirm_pass = document.getElementById('c_passwd').value;
+            if (pass != confirm_pass) {
+                document.getElementById('error-c-passwd').textContent="passwd doesn't match";
+                document.getElementById('error-c-passwd').style.color='red';
+                return false;
+            
+            }
+            else{
+                return true;
+            }
+            return true;
+        }
+        
+    </script>
+ 
+{% endblock content %}
